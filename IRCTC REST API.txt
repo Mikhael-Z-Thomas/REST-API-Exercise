@@ -1,0 +1,67 @@
+REST API for IRCTC 
+Retrieving data of all users - GET - status code 200
+Response Body
+[
+	{
+		"userId":104,
+		"name":"Mikhael",
+		"email":"mikhael333@gmail.com",
+		"mobile":"9310373385",
+		"TrainName":"XYZ",
+		"TrainType":"Duronto",
+		"Price": 100
+	}
+	{
+		"userId":105,
+		"name":"Mike",
+		"email":"233@gmail.com",
+		"mobile":"931213231",
+		"TrainName":"ads",
+		"TrainType":"Rajdhani",
+		"Price": 150
+	}
+
+]
+GET - http://localhost:5000/irctc/users
+
+Retrieving data from a user - GET - Status Code 200
+Response Body
+{
+	"userId":104,
+	"name":"Mikhael",
+	"email":"mikhael333@gmail.com",
+	"mobile":"9310373385",
+	"TrainName":"XYZ",
+	"TrainType":"Duronto",
+	"Price": 100
+}
+GET - http://localhost:5000/irctc/users/{userID}
+
+Add new user details - POST - status code 201
+Request Body
+{
+	"name":"Mira",
+	"email":"mikhael333@gmail.com",
+	"mobile":"9310373385",
+	"TrainName":"XYZ",
+	"TrainType":"Duronto",
+	"Price": 100
+}
+POST - http://localhost:5000/irctc/users
+
+Update details - PUT - status code 202
+Request Body
+{
+	"userId":107
+	"name":"Mira",
+	"email":"mira33@gmail.com",
+	"mobile":"9310373385",
+	"TrainName":"XYZ",
+	"TrainType":"Duronto",
+	"Price": 100
+}
+PUT - http://localhost:5000/irctc/users
+
+Delete details - DELETE - status code 202
+DELETE - http://localhost:5000/irctc/users/{userID}
+

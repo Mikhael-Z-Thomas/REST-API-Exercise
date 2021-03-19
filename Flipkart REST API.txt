@@ -1,0 +1,63 @@
+
+REST API for Flipkart
+
+
+Retrieving data of all users - GET - status code 200
+Response Body
+[
+	{
+		"userId":555,
+		"name":"Mira",
+		"email":"mira333@gmail.com",
+		"mobile":"93132373385",
+		"password":"123asd"
+	}
+	{
+		"userId":556,
+		"name":"Asta",
+		"email":"233@gmail.com",
+		"mobile":"931213231",
+		"password":"324243
+	}
+
+]
+GET - http://localhost:5000/flipkart/users
+
+Retrieving data from a user - GET - Status Code 200
+Response Body
+	{
+		"userId":555,
+		"name":"Mira",
+		"email":"mira333@gmail.com",
+		"mobile":"93132373385",
+		"password":"123asd"
+	}
+GET - http://localhost:5000/flipkart/users/{userID}
+
+Add new user details - POST - status code 201
+Request Body
+	{
+		"userId":560,
+		"name":"Ash",
+		"email":"ash123@gmail.com",
+		"mobile":"9342373385",
+		"password":"12323asd"
+	}
+POST - http://localhost:5000/flipkart/users
+
+Update details - PUT - status code 202
+Request Body
+	{
+		"userId":555,
+		"name":"Mira",
+		"email":"mira32333@gmail.com",
+		"mobile":"93113273385",
+		"password":"123asd"
+	}
+PUT - http://localhost:5000/flipkart/users
+
+Delete details - DELETE - status code 202
+DELETE - http://localhost:5000/flipkart/users/{userID}
+
+
+
